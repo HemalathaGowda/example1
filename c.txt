@@ -1,0 +1,9 @@
+img {
+      position:absolute;
+      top:350px;
+      left:500px;
+      height:100px;
+      width:100px;
+      border-style:double;
+      border-color:red
+    }
