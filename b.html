@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>Move Image</title>
+<script type="text/javascript">
+function mv_img(id)
+{
+button=document.getElementById(id);
+pic=document.getElementById("nbta");
+top_pos=parseInt(getComputedStyle(pic).top,10);
+left_pos=parseInt(getComputedStyle(pic).left,10);
+switch(button.value)
+{
+case "UP":new_top=top_pos-10+'px';
+                  break;
+case "DOWN":new_top=top_pos+10+'px';
+                  break;
+case "LEFT":new_left=left_pos-10+'px';
+                  break;
+case "RIGHT":new_left=left_pos+10+'px';
+                  break;
+}
+pic.style.top=new_top;
+pic.style.left=new_left;
+}
+</script>
+</head>
+<body>
+<div>
+<input type="button" id="up" value="UP" onclick="mv_img(id);"/>
+<input type="button" id="down" value="DOWN" onclick="mv_img(id);"/>
+<input type="button" id="left" value="LEFT" onclick="mv_img(id);"/>
+<input type="button" id="right" value="RIGHT" onclick="mv_img(id);"/>
+</div>
+<img id="nbta" src="nobita.png">
+</body>
+</html>
